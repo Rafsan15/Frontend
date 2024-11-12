@@ -1,0 +1,211 @@
+
+/* For Modal  */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none; /* Hide modal by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Ensure it's above other content */
+}
+
+.modal.show {
+  display: flex; /* Display modal when 'show' class is added */
+}
+
+.modal-dialog {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+  max-width: 500px; /* Limits modal width */
+  width: 90%; /* Responsive width */
+}
+
+.modal-header, .modal-footer {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-header {
+  border-bottom: none; /* Removes bottom border */
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #ddd; /* Adds a border at the top */
+}
+
+.modal-title {
+  width: 90%;
+  margin: 0;
+  font-size: 18px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.btn {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%; /* Ensure it fits smaller screens */
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .modal-footer button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* For Form */
+
+.form-container {
+  max-width: 600px; /* Limits the width of the form */
+  margin: 20px auto; /* Centers the form horizontally */
+  padding: 20px;
+  border: 1px solid #ccc; /* Adds a light gray border */
+  border-radius: 8px; /* Rounds the corners of the border */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #fff; /* Sets the background color */
+}
+
+h2 {
+  text-align: center; /* Centers the heading */
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 15px; /* Adds spacing between form elements */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Makes labels bold */
+}
+
+input, select {
+  width: 100%; /* Makes inputs and selects full width */
+  padding: 8px;
+  border: 1px solid #ccc; /* Adds a border to inputs */
+  border-radius: 4px; /* Rounds the corners */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+button {
+  width: 100%; /* Makes the button full width */
+  padding: 10px;
+  background-color: #007bff; /* Sets button background color */
+  color: #fff; /* Sets button text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darkens button on hover */
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px; /* Reduces padding for smaller screens */
+  }
+
+  button {
+    font-size: 14px; /* Reduces button font size for smaller screens */
+  }
+}
+
+/* For Table */
+
+.table-container {
+  margin: 20px auto; /* Centers the table */
+  padding: 10px;
+  border: 1px solid #ccc; /* Adds a border around the container */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #f9f9f9; /* Light background */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Blue heading color */
+}
+
+.table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove space between cells */
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: center; /* Centers content */
+}
+
+.table th {
+  background-color: #007bff; /* Blueish header background */
+  color: #fff; /* White text color */
+  border-bottom: 2px solid #0056b3; /* Darker border for header */
+}
+
+.table tr:nth-child(even) {
+  background-color: rgb(5, 64, 92); /* Light blue for even rows */
+}
+
+.table tr:nth-child(odd) {
+  background-color: #020f1a; /* Slightly lighter blue for odd rows */
+}
+
+.table td {
+  border-bottom: 1px solid #ddd; /* Light border between rows */
+}
+
+.table-container::before, .table-container::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #007bff; /* Page break line color */
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    padding: 5px;
+  }
+
+  .table th, .table td {
+    padding: 8px;
+    font-size: 14px; /* Smaller font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 18px; /* Smaller heading size for responsiveness */
+  }
+}
+
